@@ -14,7 +14,7 @@ config = {
         "cache_directory": "",
     },
     "chroma": {
-        "persist_dir": "./database",
+        "persist_dir": "./database_new",
     },
     "path": {
         "input_directory": "./documents",

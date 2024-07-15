@@ -81,12 +81,11 @@ metadata_field_info = [
         description="The Date the document was uploaded",
         type="string",
     ),
-    
-    AttributeInfo(
-        name="keyword", 
-        description="Keywords in the content", 
-        type="string"
-    ),
+    # AttributeInfo(
+    #     name="keyword", 
+    #     description="Keywords in the content", 
+    #     type="string"
+    # ),
 ]
 
 from utils.config import config
@@ -118,7 +117,7 @@ class Ragpipeline:
     def init_vectorDB(self, persist_dir=config["chroma"]["persist_dir"]):
         embeddings = OpenAIEmbeddings(model=config['embed_model']['model_name'])
         vector_store = Chroma(
-            persist_directory=persist_dir,
+            persist_directory=persist_dir,  # config["chroma"]["persist_dir"]
             embedding_function=embeddings
         )
         print(f"[초기화] vector_store 초기화 완료")

@@ -114,8 +114,6 @@ qa_system_prompt = """
 {input}
 
 답변:
-
-
 """
 
 
