@@ -7,7 +7,6 @@ __pycache__/
 
 database
 experiment_dataset
-my_data
 
 # C extensions
 *.so
